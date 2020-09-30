@@ -5,3 +5,6 @@ keys*
 alter_db.py
 draft.py
 app.py
+test_db_creation.py
+new_first_db.db
+store.db
