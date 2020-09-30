@@ -2,3 +2,6 @@ my_flask_env
 .idea
 __*
 keys*
+alter_db.py
+draft.py
+app.py
