@@ -18,10 +18,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 api = Api(app)
 
 
-@app.before_first_request
-def create_tables():
-    dbalch.create_all()
-
 # used to get a json web token?
 # it generates an entry point /auth
 # we send it a user & pw and it sends us back a jwt
