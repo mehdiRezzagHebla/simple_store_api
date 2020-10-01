@@ -8,3 +8,4 @@ app.py
 test_db_creation.py
 new_first_db.db
 store.db
+*.pyc
