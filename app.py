@@ -5,6 +5,7 @@ import security
 from user_api.user_api import Reg_User, UserList
 from item_api.item_api import Item, ItemList
 from store_api.store_api import Store
+import os
 
 # this line is a must in any flask app
 app = Flask(__name__)
@@ -12,12 +13,15 @@ app = Flask(__name__)
 # this is like an encrypting code
 # somehow it prevents tempering with cookies
 app.secret_key = 'joumanji'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///first_db.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///first_db.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # initializes the API?
 api = Api(app)
 
-
+if __name__ == "__main__":
+    @app.before_first_request
+    def create_tables():
+        dbalch.create_all()
 # used to get a json web token?
 # it generates an entry point /auth
 # we send it a user & pw and it sends us back a jwt
