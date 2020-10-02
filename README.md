@@ -17,3 +17,5 @@ Also, user authentication (username & password) is implemented, although it is v
 
 This API uses SQLite3 in a local environment and PostgreSQL in Heroku.
 
+Created heroku/live-deploy branch for continuous deployment to heroku, this branch will only include sane and tested code base.
+
