@@ -3,8 +3,8 @@ from db import dbalch
 
 db_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'first_db.db')
 
-# this son of a bitch better be working from test 01
-# this a bad son of a b****, ofc he will
+# this son of a unicorn better be working from test 01
+# this a bad son of a unicorn, ofc he will
 # MRH :~
 
 
